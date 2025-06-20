@@ -78,7 +78,6 @@ TBLPROPERTIES ("skip.header.line.count"="1");
 -- TABLAS DE HECHOS
 -- ================================
 
--- Reservas
 CREATE TABLE IF NOT EXISTS fact_reserva (
   reserva_id BIGINT,
   cliente_id BIGINT,
@@ -87,9 +86,11 @@ CREATE TABLE IF NOT EXISTS fact_reserva (
   numero_personas INT,
   estado_reserva STRING
 )
-STORED AS ORC;
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+TBLPROPERTIES ("skip.header.line.count"="1");
 
--- Pedidos
 CREATE TABLE IF NOT EXISTS fact_pedido (
   pedido_id BIGINT,
   cliente_id BIGINT,
@@ -100,4 +101,7 @@ CREATE TABLE IF NOT EXISTS fact_pedido (
   cantidad INT,
   monto_total DOUBLE
 )
-STORED AS ORC;
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+TBLPROPERTIES ("skip.header.line.count"="1");
