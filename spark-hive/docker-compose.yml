@@ -1,0 +1,64 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:17
+    container_name: hive-postgres
+    environment:
+      POSTGRES_DB: hive
+      POSTGRES_USER: hiveuser
+      POSTGRES_PASSWORD: hivepassword
+    ports: ["5432:5432"]
+    volumes:
+      - hive_postgres:/var/lib/postgresql/data
+
+  metastore:
+    image: apache/hive:4.0.1
+    container_name: hive-metastore
+    depends_on: [postgres]
+    environment:
+      SERVICE_NAME: metastore
+      DB_DRIVER: postgres
+      SERVICE_OPTS: >-
+        -Djavax.jdo.option.ConnectionDriverName=org.postgresql.Driver
+        -Djavax.jdo.option.ConnectionURL=jdbc:postgresql://postgres:5432/hive
+        -Djavax.jdo.option.ConnectionUserName=hiveuser
+        -Djavax.jdo.option.ConnectionPassword=hivepassword
+    volumes:
+      - ./jars/postgresql.jar:/opt/hive/lib/postgresql.jar
+      - ./configs/hive-site.xml:/opt/hive/conf/hive-site.xml
+    ports: ["9083:9083"]
+
+  hiveserver2:
+    image: apache/hive:4.0.1
+    container_name: hive-server
+    depends_on: [metastore]
+    entrypoint: >
+      /bin/bash -c "
+        echo '⏳ Esperando al metastore...' &&
+        sleep 10 &&
+        /opt/hive/bin/hive --service hiveserver2 --hiveconf hive.root.logger=INFO,console
+      "
+    environment:
+      HIVE_AUX_JARS_PATH: /opt/hive/lib
+    volumes:
+      - ./jars/postgresql.jar:/opt/hive/lib/postgresql.jar
+      - ./configs/hive-site.xml:/opt/hive/conf/hive-site.xml
+    ports:
+      - "10000:10000"
+      - "10002:10002"
+
+  spark:
+    image: bitnami/spark:3.4.0
+    container_name: spark
+    depends_on: [hiveserver2]
+    environment:
+      SPARK_MODE: master
+      SPARK_ENABLE_HIVE: "yes"
+    volumes:
+      - ./jars/postgresql.jar:/opt/bitnami/spark/jars/postgresql.jar
+      - ./configs/hive-site.xml:/opt/bitnami/spark/conf/hive-site.xml
+      - ./configs/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ./scripts:/scripts
+    ports: ["4040:4040","7077:7077"]
+volumes:
+  hive_postgres:

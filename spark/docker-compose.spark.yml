@@ -1,0 +1,19 @@
+services:
+  spark:
+    image: bitnami/spark:3.3
+    container_name: spark-hive
+    environment:
+      - SPARK_MODE=client
+      - SPARK_MASTER_URL=local
+      - SPARK_HIVE_SUPPORT=true
+    volumes:
+      - ./scripts:/opt/spark-apps
+      - ./spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+      - ./jars:/opt/bitnami/spark/jars
+    command: tail -f /dev/null
+    networks:
+      - hive-spark-net
+
+networks:
+  hive-spark-net:
+    external: true
