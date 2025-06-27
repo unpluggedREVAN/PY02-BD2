@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  neo4j_grafos:
+    container_name: neo4j_grafos
+    image: neo4j:5.11.0
+    ports:
+      - 7480:7474     # HTTP de Neo4j Browser
+      - 7688:7687     # Bolt
+    environment:
+      - NEO4J_AUTH=neo4j/test252525
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4J_PLUGINS=["apoc","graph-data-science"]
+      - NEO4J_dbms.default_listen_address=0.0.0.0
+      - NEO4J_dbms.default_advertised_address=neo4j_grafos
+    volumes:
+      - neo4j_grafos_data:/data
+      - neo4j_grafos_logs:/logs
+      - ./import_grafos:/import
+
+  neo4j_rutas:
+    container_name: neo4j_rutas
+    image: neo4j:5.11.0
+    ports:
+      - 7481:7474     # HTTP de Neo4j Browser
+      - 7689:7687     # Bolt
+    environment:
+      - NEO4J_AUTH=neo4j/test252525
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4J_PLUGINS=["apoc","graph-data-science"]
+      - NEO4J_dbms.default_listen_address=0.0.0.0
+      - NEO4J_dbms.default_advertised_address=neo4j_rutas
+    volumes:
+      - neo4j_rutas_data:/data
+      - neo4j_rutas_logs:/logs
+      - ./import_rutas:/import
+
+volumes:
+  neo4j_grafos_data:
+  neo4j_grafos_logs:
+  neo4j_rutas_data:
+  neo4j_rutas_logs:
