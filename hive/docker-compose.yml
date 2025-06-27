@@ -65,11 +65,31 @@ services:
       - "8081:8080"
     networks:
       - hive-spark-net
-
+  superset:
+    build:
+      context: .
+      dockerfile: Dockerfile.superset
+    container_name: superset
+    ports:
+      - "8088:8088"
+    networks:
+      - hive-spark-net
+    environment:
+      - SUPERSET_SECRET_KEY=some_random_secret_key
+    volumes:
+      - superset_home:/app/superset_home
+    entrypoint: >
+      /bin/bash -c "
+        superset db upgrade &&
+        superset fab create-admin --username admin --firstname admin --lastname admin --email admin@superset.com --password admin123 &&
+        superset init &&
+        superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debug
+      "
 
 volumes:
   namenode:
   datanode:
+  superset_home:
 
 networks:
   hive-spark-net:

@@ -1,0 +1,11 @@
+FROM apache/superset:3.0.0
+
+USER root
+
+# Instala gcc y paquetes necesarios para pyhive
+RUN apt-get update && \
+    apt-get install -y build-essential gcc && \
+    pip install --no-cache-dir pyhive thrift sasl thrift-sasl
+
+# Volvemos al usuario original de Superset
+USER superset
