@@ -1,51 +1,81 @@
-cliente_id,nombre_completo,email
-1,Eloy Bonet Ramón,candido06@example.net
-2,Eva del Azorin,elpidionavas@example.net
-3,Odalys Higueras Céspedes,rubiomaria-angeles@example.org
-4,Florinda Anastasia Agudo Moles,ccal@example.org
-5,Bernardino Almazán Manzanares,qtapia@example.com
-6,Rodrigo Mayol Nuñez,mgabaldon@example.net
-7,Marcia Miró,puigteodora@example.net
-8,Irma Torre,gperera@example.org
-9,Primitivo Blanch Torrens,francisco55@example.net
-10,Verónica Beltrán Saura,bnavarrete@example.org
-11,Anunciación Parra-Alberto,jenaro68@example.net
-12,Miguel Maestre Uría,candelastomas@example.org
-13,Julio Sales Pinedo,aarregui@example.org
-14,Celia Almazán Jerez,isidora46@example.net
-15,Abigaíl Camps Barros,laura11@example.com
-16,Rómulo Pina Beltrán,uandres@example.com
-17,Alejandra Nadal Ribas,amado26@example.org
-18,Gilberto Gutierrez Bermudez,villenaroldan@example.net
-19,Camilo Yago Manuel Porras,edmundo85@example.net
-20,Maxi Diaz Pomares,vbarrios@example.org
-21,Nayara Almansa Olmedo,tsanmartin@example.com
-22,Cebrián Vélez Morcillo,olegariovall@example.org
-23,Paola del Gomila,ciro48@example.org
-24,Venceslás Montserrat,romulo08@example.org
-25,José Antonio Flores,ferrerajulio@example.net
-26,Aristides del Blanes,casandra82@example.net
-27,Rubén Tomé Ugarte,qanaya@example.net
-28,Teresita Torre-Niño,ggomez@example.org
-29,Mercedes Adelaida Urrutia Nuñez,badiaponcio@example.com
-30,Nayara Rivero Moles,inocencio75@example.org
-31,Graciano Barrios Ribera,qvall@example.org
-32,Florina del Bayón,donato48@example.net
-33,Amor Pintor Aznar,gmartin@example.com
-34,Ramona Morata-Herrera,clarranaga@example.net
-35,Fabiola Hurtado-Sarabia,nicolas02@example.org
-36,Iker Valderrama Catalán,earnau@example.net
-37,Fermín Pelayo Giner,silvaanna@example.net
-38,Patricio Luis Ángel Alcalá Montes,sgoni@example.org
-39,Erasmo Diéguez-Rico,teodoro09@example.org
-40,Nerea Cózar Figuerola,leonbeatriz@example.org
-41,Sofía Ferrera,angelina73@example.com
-42,Araceli Calderón,zlosa@example.org
-43,Ámbar Bauzà,zramos@example.com
-44,Amor Roselló Ruano,fabio72@example.org
-45,Dionisio Arcos,virginiagalindo@example.org
-46,Ángeles Amigó Alba,jmontserrat@example.org
-47,Óscar Hoz Ruano,aurea24@example.org
-48,Nico Modesto Morcillo Garay,pardomireia@example.org
-49,Coral Ribas Girona,jportillo@example.org
-50,Angélica Valdés Arnau,emilio71@example.org
+cliente_id,nombre_completo,email,latitud,longitud
+1,Eloy Bonet Ramón,candido06@example.net,60.9462805,-1.652719
+2,Tamara Azorin Cuervo,nicolasmugica@example.net,-24.1894635,-92.072973
+3,Víctor Rubio Bonilla,abecerra@example.com,30.345443,-125.219453
+4,Arturo Cisneros Cases,manzanaresviviana@example.com,63.923061,76.046292
+5,Joel Arco-Mayol,azahara73@example.net,81.4649095,102.971208
+6,Rufina Miró-Alberola,bvilalta@example.net,54.5577085,162.713296
+7,Vilma Serafina Torre Viñas,gperera@example.org,83.262028,-82.576765
+8,Yago Torrens Juárez,nicanornavas@example.net,15.010152,-140.652314
+9,Gala Navarrete Alegre,deliaborja@example.net,7.580408,-173.112425
+10,Crescencia Ramirez Vallejo,maestreana-belen@example.net,-27.3543635,112.149103
+11,Carmen Corral Sales,cserra@example.org,-53.8343345,64.995845
+12,Agustín Jerez,isidora46@example.net,22.8388085,-179.809232
+13,Martin Barros Vicens,laura11@example.com,-87.701868,107.655982
+14,Angelina Quintero Andres,juan-francisco70@example.net,-0.1196105,42.302988
+15,Aitana Céspedes Rius,coboramon@example.net,-26.927484,-137.921952
+16,Reynaldo Villena Ponce,esteban46@example.com,-56.050980,107.183282
+17,Lorena Carreras Diaz,drosell@example.net,-53.488540,64.136990
+18,Félix Sandoval Sanmartín,timoteo02@example.net,-2.7970475,97.477753
+19,Manu Cervantes,angelita18@example.net,9.052830,-59.255437
+20,Evita Buendía-Llabrés,herminiomontserrat@example.com,16.882994,-156.901303
+21,Anita Figueras,martaalemany@example.org,-17.992243,123.130465
+22,Aristides del Blanes,casandra82@example.net,-53.641496,79.823531
+23,Patricia Puig Anaya,leyre97@example.com,16.250327,-59.660489
+24,Ángela Cases,urrutiaolegario@example.net,66.933764,-114.331925
+25,Geraldo Serna Paredes,wmoles@example.org,30.5400955,4.164588
+26,Segismundo Escrivá,abarrios@example.com,44.3451805,-37.471926
+27,Tiburcio Peñalver Pedrosa,martidonato@example.com,44.9772875,145.049296
+28,Amor Pintor Aznar,gmartin@example.com,63.955873,-5.680627
+29,Moisés del Larrañaga,pnunez@example.net,32.2686445,88.970078
+30,Yolanda Llopis-Navas,esparzaduilio@example.org,24.922582,174.444679
+31,Paula Catalán Tejada,sosacamila@example.org,-2.532717,18.524629
+32,Marcelino de Silva,julieta90@example.com,13.750539,-57.820487
+33,Tristán Isern López,sigfridopallares@example.com,-78.348195,145.912078
+34,Jose Ramón Cózar Figuerola,leonbeatriz@example.org,52.601382,-75.816356
+35,Josep Toribio Solsona Gomez,belen11@example.com,74.513709,112.573902
+36,Elisa de Viñas,pozasantos@example.com,-60.2176085,-147.706193
+37,Iris Ruano-Villar,fabio72@example.org,-33.190991,-50.446863
+38,Donato Galindo Beltrán,aamigo@example.com,86.150957,-7.170890
+39,Ale de Hoz,lmanuel@example.com,-59.742091,-28.308210
+40,Cloe Villalba Amo,mireia27@example.org,21.209683,-60.787983
+41,Narcisa Royo,yfabregat@example.org,43.3945365,-157.132195
+42,Buenaventura Jordán Campillo Cases,seguiangeles@example.com,58.122740,149.966047
+43,Iván Viñas Osorio,primitivo36@example.org,-61.619139,93.009627
+44,Manu Morcillo Blanch,rodrigoescolano@example.com,-56.1376815,75.101818
+45,Teodoro Adadia Cámara,muroanacleto@example.org,-50.698584,-62.386111
+46,Irene Font Quiroga,barberoevaristo@example.org,33.838560,-131.527346
+47,Nicanor Armengol Palomar,pfabregas@example.org,25.776441,3.318520
+48,Arsenio Agustí Manzanares,haydee65@example.org,-73.6589915,-148.885574
+49,Ana Sofía de Iborra,joel28@example.org,72.3211995,164.034307
+50,Dorotea del Pedro,eugenia26@example.org,71.773641,-24.667752
+51,Estefanía Acero Ordóñez,mariscalcebrian@example.com,-40.6982895,147.496326
+52,Isidora Calvo Fiol,mbejarano@example.org,6.171611,49.443224
+53,Elodia Cárdenas Ponce,julialuisina@example.org,77.8745655,-93.372923
+54,Gervasio Espejo,cerezolidia@example.net,-62.782033,-34.803080
+55,Victoriano Beltrán Paniagua,iniguezponcio@example.org,-22.3349945,40.518482
+56,Martín Juan Vives,carrilloyesica@example.com,-12.9862085,162.516122
+57,Isidro Desiderio Adadia Bueno,cabreromaria-fernanda@example.com,14.222046,12.612376
+58,Sebastián Catalán Ponce,ribeshugo@example.org,-88.853007,43.986854
+59,Samu Blanes Díaz,tadeo26@example.com,-72.5735645,-167.207780
+60,Ruy Prada Larrea,fabrasara@example.com,-6.407586,140.751604
+61,Rita del Alsina,mariolopez@example.org,24.615462,-66.200931
+62,Amalia Rocamora Bastida,franciscoarevalo@example.net,-30.306224,-146.321565
+63,Marina Falcó Pérez,epatino@example.org,-65.923795,55.857246
+64,Juanito Merino Anguita,imeldaaranda@example.org,82.8251105,102.032302
+65,Pepe Ayuso Requena,vplanas@example.net,-41.026527,165.166095
+66,Inés Calleja Bonet,garzonevaristo@example.net,82.8633165,-107.018521
+67,Encarna Patiño-Viana,slago@example.com,-40.6001965,106.426117
+68,Sonia Bravo,coboaurora@example.net,88.203355,142.456352
+69,Javi Hoz Tello,peralmanu@example.com,10.253848,167.833521
+70,Sigfrido Julio César Nevado Fiol,anibalperera@example.org,67.2837485,-128.015428
+71,Rosario Perales Robledo,veracalvo@example.net,75.9056215,-140.895726
+72,Luciano del Cerdán,torrentsbegona@example.org,78.345578,101.973377
+73,Eva María Miró Rico,nicolas72@example.org,-62.588946,-151.686795
+74,Olivia Cobo,apolinar22@example.net,-45.1067055,34.432332
+75,Rogelio Ibañez Verdugo,maria-pilartorre@example.net,89.4778435,-177.186277
+76,Calixta Lloret Ordóñez,egomila@example.com,36.803871,32.766916
+77,Amanda Román Rico,moranvicente@example.com,-86.1163255,-120.057132
+78,Pepe Osorio Patiño,mayte38@example.net,60.882171,75.606768
+79,Nélida Nogueira-Guillen,estebanedmundo@example.net,30.4698035,-71.373329
+80,Inés Alcaraz Olivé,julio-cesarpalacios@example.net,-6.5808985,-141.617372

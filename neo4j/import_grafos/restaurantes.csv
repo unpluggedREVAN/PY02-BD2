@@ -1,11 +1,19 @@
-restaurante_id,nombre_restaurante,ciudad
-1,Restaurante Carro,Huelva
-2,Casa Carmina,León
-3,Restaurante Viñas,Girona
-4,Casa Primitivo,Jaén
-5,Casa Asdrubal,Málaga
-6,Restaurante Bustamante,Valencia
-7,Restaurante Blanch,Jaén
-8,Casa Geraldo,Barcelona
-9,El Rincón de Sarita,Barcelona
-10,El Rincón de Renata,Cáceres
+restaurante_id,nombre_restaurante,ciudad,latitud,longitud
+1,Restaurante Oliva,Zamora,-77.408193,-116.595063
+2,Casa Celestina,Melilla,-87.301533,142.093234
+3,Restaurante Torre,La Coruña,44.0988575,-145.578765
+4,Casa Nazaret,Cádiz,3.708172,-57.118233
+5,Casa Nando,Valencia,41.077692,-117.205106
+6,Restaurante Priego,Huelva,46.812995,21.630365
+7,Restaurante Calatayud,Córdoba,-65.937910,-115.011661
+8,Casa Rafa,Cantabria,-67.8802035,-144.889106
+9,El Rincón de Telmo,Toledo,27.244775,60.183874
+10,El Rincón de Lidia,La Rioja,-76.162564,-129.578135
+11,Casa Marcelino,Jaén,-0.7904295,17.450633
+12,Casa Paco,Guipúzcoa,72.5888725,-80.448358
+13,Restaurante Carrillo,León,15.1826835,88.482299
+14,Restaurante Montoya,Castellón,-12.958147,-10.306989
+15,Restaurante Madrid,Guadalajara,72.3952615,73.235900
+16,Casa Poncio,Murcia,-80.7498235,150.515936
+17,El Rincón de Adriana,Castellón,-1.369175,-50.762891
+18,Casa Juanita,Navarra,-30.504689,-12.412945
